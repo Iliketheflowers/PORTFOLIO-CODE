@@ -1,93 +1,143 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photography</title>
     <link rel="stylesheet" href="CSS/photography.css" />
-</head>
+  </head>
 
-<body>
+  <body>
+    <header class="header">
+      <div class="header-image">
+        <img src="CSS/images/Photographytitle.png" alt="Photography" />
+      </div>
 
-    <section class="header">
-        <div class="header-image">
-            <img src="CSS/images/photographyheader.png" alt="Portfolio Header" />
-        </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="main.html">HOME</a>
+        <a href="film.html">FILM</a>
+        <a href="art.html">ART</a>
+      </nav>
+    </header>
 
-        <nav class="nav" aria-label="Main navigation">
-            <a href="photography.html">PHOTOGRAPHY</a>
-            <a href="film.html">FILM</a>
-            <a href="art.html">ART</a>
-        </nav>
-    </section>
-
-    <div class="lunaimages">
-        <h1>
-            Movement in still pictures
-        </h1>
+    <main>
+      <section class="intro-block">
+        <h1>View the world through my perspectives</h1>
 
         <p>
-            How can still images create a sense of movement and narrative?
+          I travel a lot, and photography is usually how I slow myself down while doing it. Wherever I
+          am, I'm drawn to the people who live and work there, the ones shaping a place through small,
+          everyday actions. I like observing how people move, interact, rest, and exist within their
+          surroundings.
         </p>
 
-    </div>
+        <p>
+          Alongside that, I photograph nature, animals, and landscapes, not in a dramatic, postcard way,
+          but in moments that feel honest and unpolished. Sometimes it's about light, sometimes about
+          texture, sometimes just about something being visually satisfying for reasons I can't fully
+          explain.
+        </p>
 
-    <div class="carousel">
-        <div class="group">
-            <div class="card"><img src="CSS/images/photographywide/Wide001.jpg" alt="Picture1"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide002.jpg" alt="Picture2"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide003.jpg" alt="Picture3"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide004.jpg" alt="Picture4"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide005.jpg" alt="Picture5"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide006.jpg" alt="Picture6"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide007.jpg" alt="Picture7"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide008.jpg" alt="Picture8"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide009.jpg" alt="Picture9"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide010.jpg" alt="Picture10"></div>
+        <p>
+          My images come from curiosity more than intention. I don't arrive with a shot list. I respond
+          to what's around me. If something feels visually strong, calm, strange, or quietly beautiful,
+          that's usually enough.
+        </p>
+
+        <p class="intro-note">
+          Below, you'll find a selection of my favorite photographs from <b>Bangkok</b>, <b>Bayombong</b>,
+          and <b>Boracay</b>.
+        </p>
+      </section>
+
+      <section class="carousel" aria-label="Favorite travel photos">
+        <ul class="group">
+          <li class="card"><img src="CSS/images/DSC06360.jpg" alt="Photo 1" /></li>
+          <li class="card"><img src="CSS/images/DSC06426.jpg" alt="Photo 2" /></li>
+          <li class="card"><img src="CSS/images/DSC06445.jpg" alt="Photo 3" /></li>
+          <li class="card"><img src="CSS/images/DSC06495.jpg" alt="Photo 4" /></li>
+          <li class="card"><img src="CSS/images/DSC06502.jpg" alt="Photo 5" /></li>
+          <li class="card"><img src="CSS/images/DSC06537.jpg" alt="Photo 6" /></li>
+          <li class="card"><img src="CSS/images/DSC07397.JPG" alt="Photo 7" /></li>
+          <li class="card"><img src="CSS/images/DSC07185.jpg" alt="Photo 8" /></li>
+          <li class="card"><img src="CSS/images/DSC07260.jpg" alt="Photo 9" /></li>
+          <li class="card"><img src="CSS/images/DSC07273.jpg" alt="Photo 10" /></li>
+        </ul>
+
+        <!-- duplicate for seamless loop -->
+        <ul class="group" aria-hidden="true">
+          <li class="card"><img src="CSS/images/DSC06360.jpg" alt="" /></li>
+          <li class="card"><img src="CSS/images/DSC06426.jpg" alt="" /></li>
+          <li class="card"><img src="CSS/images/DSC06445.jpg" alt="" /></li>
+          <li class="card"><img src="CSS/images/DSC06495.jpg" alt="" /></li>
+          <li class="card"><img src="CSS/images/DSC06502.jpg" alt="" /></li>
+          <li class="card"><img src="CSS/images/DSC06537.jpg" alt="" /></li>
+          <li class="card"><img src="CSS/images/DSC07397.JPG" alt="" /></li>
+          <li class="card"><img src="CSS/images/DSC07185.jpg" alt="" /></li>
+          <li class="card"><img src="CSS/images/DSC07260.jpg" alt="" /></li>
+          <li class="card"><img src="CSS/images/DSC07273.jpg" alt="" /></li>
+        </ul>
+      </section>
+
+      <section class="intro-block intro-block--project">
+        <h1>Small Project about Movement</h1>
+
+        <p>
+          This small photography project explores how movement and narrative can exist within still
+          images. By placing images next to each other, I tried to create a sense of flow — allowing the
+          viewer to move through the story rather than presenting a single, fixed moment.
+        </p>
+
+        <p class="intro-note">
+          The photographs don't aim to explain everything, but to invite interpretation, imagination, and
+          that tiny “wait… what's happening here?” feeling.
+        </p>
+      </section>
+
+      <section class="banner" aria-label="Movement project">
+        <div class="slider" style="--quantity: 10">
+          <div class="item" style="--position: 1"><img src="CSS/images/photographywide/Wide001.jpg" alt="" /></div>
+          <div class="item" style="--position: 2"><img src="CSS/images/photographywide/Wide002.jpg" alt="" /></div>
+          <div class="item" style="--position: 3"><img src="CSS/images/photographywide/Wide003.jpg" alt="" /></div>
+          <div class="item" style="--position: 4"><img src="CSS/images/photographywide/Wide004.jpg" alt="" /></div>
+          <div class="item" style="--position: 5"><img src="CSS/images/photographywide/Wide005.jpg" alt="" /></div>
+          <div class="item" style="--position: 6"><img src="CSS/images/photographywide/Wide006.jpg" alt="" /></div>
+          <div class="item" style="--position: 7"><img src="CSS/images/photographywide/Wide007.jpg" alt="" /></div>
+          <div class="item" style="--position: 8"><img src="CSS/images/photographywide/Wide008.jpg" alt="" /></div>
+          <div class="item" style="--position: 9"><img src="CSS/images/photographywide/Wide009.jpg" alt="" /></div>
+          <div class="item" style="--position: 10"><img src="CSS/images/photographywide/Wide010.jpg" alt="" /></div>
         </div>
-        <div aria-hidden class="group">
-            <div class="card"><img src="CSS/images/photographywide/Wide001.jpg" alt="Picture1"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide002.jpg" alt="Picture2"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide003.jpg" alt="Picture3"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide004.jpg" alt="Picture4"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide005.jpg" alt="Picture5"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide006.jpg" alt="Picture6"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide007.jpg" alt="Picture7"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide008.jpg" alt="Picture8"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide009.jpg" alt="Picture9"></div>
-            <div class="card"><img src="CSS/images/photographywide/Wide010.jpg" alt="Picture10"></div>
+
+        <div class="content" aria-hidden="true">
+          <h1 class="movement movement--back">Movement</h1>
+          <div class="model"></div>
+          <h1 class="movement movement--front">Movement</h1>
         </div>
-    </div>
+      </section>
+    </main>
 
-
-
-<div class="banner">
-    <div class="slider" style="--quantity: 10">
-        <div class="item" style="--position: 1"><img src="CSS/images/photographywide/Wide001.jpg" alt=""></div>
-        <div class="item" style="--position: 2"><img src="CSS/images/photographywide/Wide002.jpg" alt=""></div>
-        <div class="item" style="--position: 3"><img src="CSS/images/photographywide/Wide003.jpg" alt=""></div>
-        <div class="item" style="--position: 4"><img src="CSS/images/photographywide/Wide004.jpg" alt=""></div>
-        <div class="item" style="--position: 5"><img src="CSS/images/photographywide/Wide005.jpg" alt=""></div>
-        <div class="item" style="--position: 6"><img src="CSS/images/photographywide/Wide006.jpg" alt=""></div>
-        <div class="item" style="--position: 7"><img src="CSS/images/photographywide/Wide007.jpg" alt=""></div>
-        <div class="item" style="--position: 8"><img src="CSS/images/photographywide/Wide008.jpg" alt=""></div>
-        <div class="item" style="--position: 9"><img src="CSS/images/photographywide/Wide009.jpg" alt=""></div>
-        <div class="item" style="--position: 10"><img src="CSS/images/photographywide/Wide010.jpg" alt=""></div>
-    </div>
-    <div class="content">
-        <h1 data-content="Movement"></h1>
-        <h1>Movement</h1>
-        <div class="author">
-            <h2>Movement in still pictures</h2>
-            <p><b>How can still images create a sense of movement and narrative?</b></p>
+    <footer class="end-footer">
+      <div class="end-footer-inner">
+        <div class="end-footer-left">
+          <div class="end-line-vertical"></div>
+          <p>
+            Coolio, you made it to the footer :D<br /><br />
+            Thanks for sticking around and looking through my work. Whether you scrolled carefully or
+            just skimmed (no judgement), I'm genuinely grateful you took the time to be here.<br /><br />
+            Stay tuned for more cool projects coming soon<br />
+            I'll be happy to see you here again<br /><br />
+            xoxo<br />
+            Stef
+          </p>
         </div>
-        <div class="model"></div>
-    </div>
-</div>
 
+        <div class="end-footer-right">
+          <h2>THE END</h2>
+          <div class="end-line-horizontal"></div>
+        </div>
+      </div>
+    </footer>
 
     <script src="JavaScript/photo.js"></script>
-</body>
-
+  </body>
 </html>
