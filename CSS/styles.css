@@ -1,0 +1,306 @@
+/* =========================
+   BASE
+   ========================= */
+
+   :root{
+    --ink: #f2e7e5;
+    --overlay: rgba(30, 10, 10, 0.55);
+    --white70: rgba(255, 255, 255, 0.7);
+    --white85: rgba(255, 255, 255, 0.85);
+    --accent: orange;
+  
+    --bg-img: url("images/backbackground.png");
+    --blur: 6px;
+  
+    --pad: clamp(18px, 5vw, 80px);
+    --vb: clamp(180px, 30vw, 340px); /* viewfinder height */
+  }
+  
+  html, body{
+    height: 100%;
+    margin: 0;
+  }
+  
+  body{
+    overflow-x: hidden;
+  }
+  
+  /* =========================
+     HERO BACKGROUND
+     ========================= */
+  
+  .hero{
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: "Times New Roman", Georgia, serif;
+  }
+  
+  .hero::before{
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: var(--bg-img) center / cover no-repeat;
+    filter: blur(var(--blur));
+    transform: scale(1.05);
+    z-index: 0;
+  }
+  
+  .hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+    z-index: 1;
+  }
+  
+  /* =========================
+     TEXT (LEFT)
+     ========================= */
+  
+  .name,
+  .tagline{
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    color: var(--ink);
+    font-style: italic;
+  }
+  
+  .name{
+    left: var(--pad);
+    top: clamp(24px, 6vh, 90px);
+  
+    font-size: clamp(28px, 6vw, 60px);
+    letter-spacing: clamp(0.01em, 0.4vw, 0.02em);
+    line-height: 1.05;
+  }
+  
+  .tagline{
+    left: var(--pad);
+    bottom: clamp(24px, 6vh, 90px);
+  
+    font-size: clamp(14px, 3.6vw, 25px);
+    letter-spacing: clamp(0.02em, 0.5vw, 0.03em);
+    line-height: 1.35;
+    max-width: 22ch;
+    opacity: 0.95;
+  }
+  
+  /* =========================
+     RIGHT GROUP
+     ========================= */
+  
+  .portfolio-wrap{
+    position: absolute;
+    right: var(--pad);
+    bottom: clamp(24px, 6vh, 90px);
+    width: clamp(320px, 70vw, 900px);
+    z-index: 3;
+  }
+  
+  .title{
+    margin: 0;
+    color: var(--ink);
+    font-size: clamp(70px, 10vw, 170px);
+    letter-spacing: 0.02em;
+    line-height: 0.9;
+    text-transform: uppercase;
+    opacity: 0.95;
+  }
+  
+  /* =========================
+     VIEWFINDER (CLICKABLE)
+     ========================= */
+  
+  .viewfinder-link{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--vb);
+    top: calc(var(--vb) * -1 - 28px);
+    display: block;
+    cursor: pointer;
+    z-index: 4;
+  }
+  
+  .viewfinder{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1.5px solid var(--white85);
+    transition: border-color 0.4s ease;
+  }
+  
+  .viewfinder::before{
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: var(--bg-img) center / cover no-repeat;
+    background-attachment: fixed;
+    filter: blur(var(--blur));
+    transform: scale(1.05);
+    z-index: 0;
+    transition: filter 0.5s ease;
+  }
+  
+  /* hover: border + sharpen */
+  .viewfinder-link:hover .viewfinder{
+    border-color: var(--accent);
+  }
+  
+  .viewfinder-link:hover .viewfinder::before{
+    filter: blur(0);
+  }
+  
+  /* =========================
+     CROSS + INFO + HINT
+     ========================= */
+  
+  .cross{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  
+    width: clamp(18px, 3.5vw, 28px);
+    height: clamp(18px, 3.5vw, 28px);
+  
+    animation: focus 3s infinite ease-in-out;
+  }
+  
+  .cross::before,
+  .cross::after{
+    content: "";
+    position: absolute;
+    background: var(--white70);
+    transition: background 0.3s ease;
+  }
+  
+  .cross::before{
+    width: 100%;
+    height: clamp(2px, 0.4vw, 3px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .cross::after{
+    height: 100%;
+    width: clamp(2px, 0.4vw, 3px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* hover: cross orange */
+  .viewfinder-link:hover .cross::before,
+  .viewfinder-link:hover .cross::after{
+    background: var(--accent);
+  }
+  
+  .camera-info{
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    z-index: 1;
+  
+    display: flex;
+    gap: clamp(14px, 3vw, 28px);
+  
+    font-family: Arial, sans-serif;
+    font-size: clamp(11px, 1.6vw, 13px);
+    letter-spacing: 0.08em;
+    color: var(--white70);
+  }
+  
+  .hint{
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    z-index: 1;
+  
+    font-family: Arial, sans-serif;
+    font-size: clamp(12px, 2.2vw, 18px);
+    letter-spacing: clamp(0.08em, 0.6vw, 0.15em);
+    text-transform: uppercase;
+  
+    color: var(--white70);
+    transition: color 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .viewfinder-link:hover .hint{
+    color: var(--accent);
+  }
+  
+  /* =========================
+     ANIMATION
+     ========================= */
+  
+  @keyframes focus{
+    0%, 100%{ opacity: 0.6; }
+    50%{ opacity: 1; }
+  }
+
+  .title::after{
+    content: "";
+    display: inline;
+    border-left: 2px solid currentColor; /* thickness */
+    margin-left: 6px;
+    animation: blink 1s steps(1) infinite;
+  }
+  
+  
+  
+  @keyframes blink{
+    0%,50%{opacity:1}
+    51%,100%{opacity:0}
+  }
+  
+  
+  /* =========================
+     RESPONSIVE
+     ========================= */
+  
+  @media (max-width: 900px){
+    /* iOS/mobile fix for fixed background inside element */
+    .viewfinder::before{
+      background-attachment: scroll;
+    }
+  }
+  
+  @media (max-width: 600px){
+    /* stack the right block and prevent cut-offs */
+    .portfolio-wrap{
+      left: var(--pad);
+      right: var(--pad);
+      bottom: clamp(18px, 5vh, 40px);
+      width: auto;
+    }
+  
+    .viewfinder-link{
+      position: relative;
+      top: 0;
+      height: clamp(180px, 36vw, 260px);
+      margin-bottom: 18px;
+    }
+  
+    .title{
+      font-size: clamp(40px, 13vw, 90px);
+      line-height: 0.95;
+    }
+  
+    .name{
+      top: 24px;
+      font-size: clamp(28px, 8vw, 44px);
+    }
+  
+    .tagline{
+      bottom: auto;
+      top: clamp(120px, 22vh, 180px);
+      font-size: clamp(14px, 4vw, 18px);
+      max-width: 18ch;
+    }
+  }
+  

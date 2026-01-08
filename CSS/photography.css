@@ -1,0 +1,229 @@
+:root{
+    --bg: rgb(240, 240, 240);
+    --ink: #111;
+    --orange: #e25b12;
+  
+    --side: clamp(16px, 5vw, 80px);
+    --gap: clamp(14px, 3vw, 48px);
+  }
+  
+  *{ box-sizing: border-box; }
+  
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+
+  
+  body{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* fixed background paper */
+  body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    background: url("images/backgroundpaper.png") center/cover no-repeat;
+    z-index: -1;
+  }
+
+
+
+  .header{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(10px, 2vw, 16px);
+  }
+  
+  .header-image{
+    position: relative;
+  }
+  
+  .header-image img{
+    width: 100%;
+    border-radius: 2px;
+  }
+  
+  /* fade out bottom of header image */
+  .header-image::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    background: linear-gradient(to bottom, rgba(240,240,240,0), rgba(240,240,240,1));
+    pointer-events: none;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: clamp(24px, 6vw, 100px);
+    padding-left: var(--side);
+  }
+  
+  .nav a{
+    text-decoration: none;
+    font-size: clamp(15px, 2vw, 17px);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+  }
+  
+  .nav a:hover{
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+.carousel {
+margin: 100px auto;
+width: 100%;
+height: 23vw;
+display: flex;
+overflow-x: auto;
+background-color: rgba(11, 11, 11, 0.804);
+padding: 20px;
+}
+
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7em;
+    animation: spin 25s infinite linear;
+    padding-right: 0.7em;
+}
+
+.card img{
+    flex: 0 0 5em;
+    height: 100%;
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+
+.card{
+    height: 20vw;
+}
+
+@keyframes spin{
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+
+
+
+
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-14deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-14deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+    rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg ))
+    translateZ(550px);
+}
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding: bottom 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.banner .content h1{
+    font-size: 16em;
+    line-height: 1em;
+    color: black;
+    position: relative;
+}
+
+.banner .content h1::after{
+position: absolute;
+inset: 0 0 0 0;
+content: attr(data-content);
+z-index: 2;
+-webkit-text-stroke: 2px #d2d2d2;
+color: transparent;
+}
+
+
+.banner .content .author{
+    text-align: right;
+    max-width: 200px;
+}
+
+.banner .content h2{
+    font-size: 2em;
+}
+
+.banner .content .model{
+    background-image: url(images/Lunacut.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
