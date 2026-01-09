@@ -113,8 +113,9 @@
   }
   
   .intro2-text{
+    font-family: "Just Me Again Down Here", cursive;
     margin: 0;
-    font-size: clamp(15px, 1.5vw, 18px);
+    font-size: clamp(17px, 2.5vw, 20px);
     line-height: 1.5;
   }
   
@@ -125,6 +126,10 @@
     font-weight: 800;
     color: var(--ink);
     text-decoration: none;
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-style: italic;
+    margin: 0 0 18px;
   }
   
   /* right side */
@@ -275,12 +280,19 @@ position: relative;
     font-size: clamp(28px, 4vw, 56px);
     letter-spacing: 0.08em;
     text-transform: uppercase;
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: clamp(50px, 2vw, 70px);
+    font-style: italic;
+    margin: 0 0 18px;
   }
   
   .panel__text p{
+    font-family: "Just Me Again Down Here", cursive;
+
     margin: 0;
     line-height: 1.5;
-    font-size: clamp(14px, 1.4vw, 18px);
+    font-size: clamp(16px, 3.4vw, 20px);
   }
   
   /* mobile stacking */
@@ -294,8 +306,12 @@ position: relative;
   .panel-link{
     display: inline-block;
     margin-top: 20px;
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-style: italic;
+    margin: 0 0 18px;
   
-    font-size: clamp(14px, 1.2vw, 16px);
+    font-size: clamp(18px, 5.2vw, 20px);
     letter-spacing: 0.12em;
     text-transform: uppercase;
   
@@ -397,8 +413,9 @@ position: relative;
   }
   
   .end-footer-left p{
+    font-family: "Just Me Again Down Here", cursive;
     margin: 0;
-    font-size: clamp(14px, 1.2vw, 16px);
+    font-size: clamp(16px, 3.2vw, 18px);
     line-height: 1.6;
   }
   
@@ -420,10 +437,14 @@ position: relative;
   
   .end-footer-right h2{
     margin: 0;
-    font-size: clamp(40px, 8vw, 120px);
     font-weight: 800;
     letter-spacing: 0.35em;
     line-height: 1;
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: clamp(56px, 8vw, 96px);
+    font-style: italic;
+    margin: 0 0 18px;
   }
   
   .end-line-horizontal{

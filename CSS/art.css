@@ -1,3 +1,8 @@
+body {
+  font-family: "Just Me Again Down Here", cursive;
+}
+
+
 :root{
     --bg: rgb(240, 240, 240);
     --ink: #111;
@@ -64,18 +69,22 @@
   }
   
   .art-intro h1{
-    margin: 0 0 24px;
-    font-size: clamp(60px, 10vw, 140px);
     font-weight: 800;
     letter-spacing: 0.3em;
     line-height: 1;
     color: var(--ink);
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: clamp(56px, 8vw, 96px);
+    font-style: italic;
+    margin: 0 0 18px;
   }
   
   .art-intro p{
+    font-family: "Just Me Again Down Here", cursive;
     margin: 0 auto 40px;
     max-width: 65ch;
-    font-size: clamp(16px, 1.4vw, 18px);
+    font-size: clamp(20px, 4.4vw, 22px);
     line-height: 1.7;
     color: rgba(17,17,17,0.85);
   }
@@ -179,10 +188,11 @@
   }
   
   .end-text{
+    font-family: "Just Me Again Down Here", cursive;
     max-width: 60ch;
     margin: 0 auto 32px;
     line-height: 1.6;
-    font-size: clamp(15px, 1.4vw, 18px);
+    font-size: clamp(20px, 4.4vw, 22px);
     color: rgba(17,17,17,0.85);
   }
   
@@ -220,8 +230,9 @@
   }
   
   .end-footer-left p{
+    font-family: "Just Me Again Down Here", cursive;
     margin: 0;
-    font-size: clamp(14px, 1.2vw, 16px);
+    font-size: clamp(16px, 3.2vw, 18px);
     line-height: 1.6;
   }
   
@@ -242,10 +253,14 @@
   
   .end-footer-right h2{
     margin: 0;
-    font-size: clamp(40px, 8vw, 120px);
     font-weight: 800;
     letter-spacing: 0.35em;
     line-height: 1;
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: clamp(56px, 8vw, 96px);
+    font-style: italic;
+    margin: 0 0 18px;
   }
   
   .end-line-horizontal{

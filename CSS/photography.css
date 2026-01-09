@@ -72,6 +72,7 @@
     font-weight: 700;
     letter-spacing: 0.06em;
     color: var(--ink);
+    
   }
   
   .nav a:hover{
@@ -91,31 +92,37 @@
   
   .intro-block h1{
     margin: 0 0 18px;
-    font-family: "Times New Roman", Georgia, serif;
     font-size: clamp(30px, 4.2vw, 64px);
     font-style: italic;
     letter-spacing: 0.03em;
     line-height: 1.05;
     color: var(--ink);
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-style: italic;
+    margin: 0 0 18px;
   }
   
   .intro-block p{
+    font-family: "Just Me Again Down Here", cursive;
+    font-size: clamp(20px, 4.4vw, 22px);
     margin: 0 auto 14px;
     max-width: 72ch;
-    font-size: clamp(15px, 1.4vw, 18px);
     line-height: 1.7;
     color: rgba(17,17,17,0.88);
   }
   
   .intro-block .intro-note{
     margin-top: 18px;
-    font-size: clamp(14px, 1.2vw, 16px);
+    font-size: clamp(16px, 3.2vw, 18px);
     letter-spacing: 0.02em;
     color: rgba(17,17,17,0.75);
   }
   
   /* optional: make the project intro feel like a chapter */
   .intro-block--project{
+    font-family: "Just Me Again Down Here", cursive;
+    font-size: clamp(20px, 4.4vw, 22px);
     margin-top: clamp(34px, 7vw, 90px);
     padding-top: clamp(10px, 2vw, 18px);
     position: relative;
@@ -299,10 +306,10 @@
     padding-left: 28px;
     max-width: 520px;
   }
-  
   .end-footer-left p{
+    font-family: "Just Me Again Down Here", cursive;
     margin: 0;
-    font-size: clamp(14px, 1.2vw, 16px);
+    font-size: clamp(16px, 3.2vw, 18px);
     line-height: 1.6;
   }
   
@@ -323,10 +330,14 @@
   
   .end-footer-right h2{
     margin: 0;
-    font-size: clamp(40px, 8vw, 120px);
     font-weight: 800;
     letter-spacing: 0.35em;
     line-height: 1;
+
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: clamp(56px, 8vw, 96px);
+    font-style: italic;
+    margin: 0 0 18px;
   }
   
   .end-line-horizontal{
